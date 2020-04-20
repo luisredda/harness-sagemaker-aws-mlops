@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+
+from flask import Flask, Response
+
+app = Flask(__name__)
+
+@app.route("/ping", methods=["GET"])
+def ping():
+    return Response(response="\n", status=200)
+
+@app.route("/invocations", methods=["POST"])
+def predict():
+    return Response(response="predict here...", status=200)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080):# QUESTION: 

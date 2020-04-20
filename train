@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+
+def train():
+    print("training... this output is coming from the Docker Container")
+    with open("/opt/ml/model/model", "w") as fh:
+        fh.write("...model parameters here...")
+
+if __name__ == "__main__":
+    train()
