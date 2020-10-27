@@ -6,13 +6,12 @@ steps:
   image: python
   commands:
   - pip install -r requirements.txt
-- name: publish
-  image: plugins/docker
+- name: publish  
+  image: plugins/ecr
   settings:
-    username:
+    access_key:
       from_secret: u_docker
-    password: 
+    secret_key:
       from_secret: p_docker
-    repo: luisredda/sagemaker-mlops
-    auto_tag: true
-    
+    repo: lr-mlops
+    registry: 759984737373.dkr.ecr.us-east-2.amazonaws.com
