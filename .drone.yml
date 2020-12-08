@@ -15,4 +15,4 @@ steps:
       from_secret: p_docker
     repo: lr-mlops
     registry: 759984737373.dkr.ecr.us-east-2.amazonaws.com
-    region: us-east-2
+    region: us-east-1
