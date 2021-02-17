@@ -6,7 +6,7 @@ steps:
   image: python
   commands:
   - pip install -r requirements.txt
-- name: publish  
+- name: publish-image  
   image: plugins/ecr
   settings:
     access_key:
