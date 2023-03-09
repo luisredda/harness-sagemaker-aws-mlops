@@ -10,8 +10,8 @@ region = session.boto_session.region_name
 #imagename = sys.argv[1]
 #image = account + ".dkr.ecr." + region + ".amazonaws.com/" + imagename
 image = sys.argv[1]
-print image
-print "Starting Training..."
+print(image)
+print('Starting Training...')
 
 model = sagemaker.estimator.Estimator(
     image_name=image,
@@ -25,6 +25,6 @@ pprint(vars(model))
 model.fit()
 pprint(vars(model))
 
-print "Deploying the model..."
+print('Deploying the model...')
 
 predictor = model.deploy(int(sys.argv[4]), sys.argv[5], endpoint_name=sys.argv[6])
