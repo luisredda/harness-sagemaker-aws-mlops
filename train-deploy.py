@@ -18,8 +18,8 @@ model = Estimator(
     image_uri=image,
     role=role,
     base_job_name='tf-custom-container-test-job',
-    instance_count=int(sys.argv[2]),
-    instance_type=sys.argv[3],
+    training_instance_count=int(sys.argv[2]),
+    training_instance_type=sys.argv[3],
     sagemaker_session=session,
 )
 
