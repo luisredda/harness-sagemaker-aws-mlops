@@ -1,6 +1,7 @@
 import sagemaker
 from pprint import pprint
 import sys
+from sagemaker.estimator import Estimator
 
 role = sagemaker.get_execution_role()
 session = sagemaker.Session()
