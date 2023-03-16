@@ -14,7 +14,7 @@ print(image)
 print('Starting Training...')
 
 model = sagemaker.estimator.Estimator(
-    image_name=image,
+    image_uri=image,
     role=role,
     train_instance_count=int(sys.argv[2]),
     train_instance_type=sys.argv[3],
