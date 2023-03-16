@@ -13,11 +13,12 @@ image = sys.argv[1]
 print(image)
 print('Starting Training...')
 
-model = sagemaker.estimator.Estimator(
+model = Estimator(
     image_uri=image,
     role=role,
-    train_instance_count=int(sys.argv[2]),
-    train_instance_type=sys.argv[3],
+    base_job_name='tf-custom-container-test-job'
+    instance_count=int(sys.argv[2]),
+    instance_type=sys.argv[3],
     sagemaker_session=session,
 )
 
